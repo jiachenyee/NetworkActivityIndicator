@@ -1,10 +1,14 @@
 # Network Activity Indicator
-
 This is a simple package that shows network activity indicator, regardless of whether the device has a notch or not
+
+## Why?
+> It is a simple way to create an unobstructive, discrete activity indicator when networking. Also, the old one, by Apple, did not work with the notch and got deprecated 😔.
+
 
 ---
 
 ## Implementation
+### Set-Up
 ```swift
 import NetworkActivityIndicator
 
@@ -44,5 +48,29 @@ class ViewController: UIViewController, NetworkActivityIndicatorDelegate {
 }
 ```
 
-## Why?
-The old network activity indicator was deprecated and would not show up on devices with a notch. Therefore, I created a replacement.
+### Start/Stop Animating
+#### Start
+> Start animating the activity indicator
+```swift
+networkActivityIndicator.start()
+```
+
+#### Stop
+> Stop animating the activity indicator
+```swift
+networkActivityIndicator.stop()
+```
+
+#### Toggle
+> Toggle the network activity indicator. If it is animating, stop, otherwise, start.
+```swift
+networkActivityIndicator.toggle()
+```
+
+#### isAnimating
+> Directly update the `isAnimating` variable to make it start and stop
+```swift
+networkActivityIndicator.isAnimating = true   // start
+networkActivityIndicator.isAnimating = false  // stop
+networkActivityIndicator.isAnimating.toggle() // toggle
+```
