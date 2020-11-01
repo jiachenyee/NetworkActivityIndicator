@@ -119,14 +119,14 @@ public class NetworkActivityIndicator {
                         activityIndicator.stopAnimating()
                         
                     }
-                    
-                    delegate.networkActivityIndicator?(stateChanged: start)
-                    
+                                        
                 } else {
                     
                     UIApplication.shared.isNetworkActivityIndicatorVisible = start
                     
                 }
+                
+                delegate.networkActivityIndicator?(stateChanged: start)
             }
         } else {
             print("Network Activity Indicator will not appear as `NetworkActivityIndicatorDelegate` is not implemented.")
