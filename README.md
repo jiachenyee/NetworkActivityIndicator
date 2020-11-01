@@ -7,6 +7,19 @@ This is a simple package that shows network activity indicator, regardless of wh
 
 ---
 
+## Installation
+### Swift Package Manager
+```swift
+let package = Package(
+    name: "MyApp",
+    dependencies: [
+        .Package(url: "https://github.com/jiachenyee/NetworkActivityIndicator.git", majorVersion: 1)
+    ]
+)
+```
+
+---
+
 ## Implementation
 ### Set-Up
 ```swift
