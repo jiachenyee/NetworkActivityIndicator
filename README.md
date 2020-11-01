@@ -89,3 +89,42 @@ networkActivityIndicator.isAnimating = true   // start
 networkActivityIndicator.isAnimating = false  // stop
 networkActivityIndicator.isAnimating.toggle() // toggle
 ```
+
+---
+
+## Questions / Issues
+
+<details>
+<summary><strong>Why is the status bar and network activity indicator overlapping?</strong></summary>
+
+1. Make sure that this is implemented
+```swift
+var statusBarHidden = false {
+    didSet {
+        setNeedsStatusBarAppearanceUpdate()
+    }
+}
+```
+
+2. Make sure that you added the `prefersStatusBarHidden` in the view controller
+```swift
+override var prefersStatusBarHidden: Bool {
+    statusBarHidden
+}
+```
+    
+</details>
+
+---
+
+## Apache License 2.0
+
+|    Permissions    |   Limitations    | Conditions |
+|-------------------|------------------|----------------------------------|
+| ✅ Commercial use | ❌ Trademark use | ℹ️ License and copyright notice |
+| ✅ Modification   | ❌ Liability     | ℹ️ State changes                |
+| ✅ Distribution   | ❌ Warranty      |
+| ✅ Patent use     |
+| ✅ Private use    |
+
+[Read the license](https://github.com/jiachenyee/NetworkActivityIndicator/blob/main/LICENSE)
