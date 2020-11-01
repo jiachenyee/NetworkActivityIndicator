@@ -1,7 +1,7 @@
 # Network Activity Indicator
 This is a simple package that shows network activity indicator, regardless of whether the device has a notch or not
 
-<img src="demo.png" width="500">
+<img src="Demo.png" width="500">
 
 ## Why?
 > It is a simple way to create an unobstructive, discrete activity indicator when networking. Also, the old one, by Apple, did not work with the notch and got deprecated 😔.
